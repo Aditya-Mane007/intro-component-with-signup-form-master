@@ -1,0 +1,206 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--blue: hsl(248, 32%, 49%);
+	--dark-Blue: hsl(249, 10%, 26%);
+	--grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+	font-family: 'Poppins';
+}
+.parent {
+	min-height: 100vh;
+	min-width: 90vw;
+	background: var(--red);
+	background-image: url('./images/bg-intro-desktop.png');
+	position: absolute;
+}
+
+.Ad-text {
+	background: var(--blue);
+	margin: auto;
+	width: 80%;
+	text-align: center;
+	height: 60px;
+	padding-top: 0.8rem;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.form {
+	position: relative;
+	padding: 30px 40px;
+	background-color: #fff;
+	margin: auto;
+	width: 80%;
+	border-radius: 10px;
+}
+.form-control {
+	position: relative;
+	width: 100%;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	/* background: #333; */
+}
+.form-control input {
+	width: 100%;
+	padding: 10px;
+	border-radius: 4px;
+	height: 45px;
+	display: block;
+	border: 2px solid var(--grayish-Blue);
+	outline: var(--dark-Blue);
+}
+
+.form-control i {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: var(--red);
+	visibility: hidden;
+}
+
+.form-control small {
+	color: var(--red);
+	position: absolute;
+	bottom: 0;
+	right: 5px;
+	visibility: hidden;
+}
+.form-control.success input {
+	border: 1px solid var(--green);
+}
+.form-control.error input {
+	border: 1px solid var(--red);
+}
+.form-control.success i {
+	visibility: hidden;
+}
+.form-control.error small {
+	visibility: visible;
+}
+.form-control.error i {
+	visibility: visible;
+}
+button {
+	width: 100%;
+	padding: 12px;
+	border-radius: 5px;
+	border: 1px solid var(--green);
+	background-color: var(--green);
+	color: #fff;
+	display: block;
+	font-size: 1rem;
+	box-shadow: 0px 0px 20px 0px hsl(154, 61%, 38%) inset;
+}
+
+.title-text {
+	/* background: cyan; */
+	padding-top: 2.5rem;
+}
+.head-text {
+	/* background: aquamarine; */
+	width: 55%;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 1.5rem;
+	font-weight: 700;
+	font-size: 1.8rem;
+	word-spacing: 5px;
+	letter-spacing: 1px;
+}
+.sub-text {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 400;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-bottom: 2rem;
+	color: #fff;
+}
+.footer .attribution {
+	margin-top: 2rem;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 720px) {
+	.parent {
+		display: grid;
+		grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr;
+		grid-template-rows: 0.5fr 0.7fr 2fr 1fr 0.5fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+
+	.Ad-text {
+		grid-area: 2 / 4 / 3 / 6;
+	}
+	.form {
+		width: 90%;
+		grid-area: 3 / 4 / 5 / 6;
+	}
+	.title-text {
+		grid-area: 3 / 2 / 5 / 4;
+		text-align: left;
+	}
+	.head-text {
+		width: 95%;
+		text-align: left;
+		font-size: 2rem;
+	}
+	.sub-text {
+		width: 100%;
+		text-align: left;
+		font-size: 1.3rem;
+
+	}
+	.footer {
+		grid-area: 5 / 2 / 6 / 6;
+	}
+}
+@media (min-width: 2560px) {
+	.Ad-text {
+		grid-area: 2 / 4 / 3 / 6;
+		height: 100px;
+		padding-top: 1rem;
+		font-size: 2rem;
+	}
+	.form {
+		width: 90%;
+		grid-area: 3 / 4 / 5 / 6;
+	}
+	.title-text {
+		grid-area:  3 / 2 / 5 / 4;
+		text-align: left;
+		margin-top: 6rem;
+	}
+	.head-text {
+		width: 95%;
+		text-align: left;
+		font-size: 3rem;
+
+	}
+	.sub-text {
+		width: 100%;
+		text-align: left;
+		font-size: 2rem;
+
+	}
+}
